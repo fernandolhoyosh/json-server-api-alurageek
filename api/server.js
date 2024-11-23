@@ -7,7 +7,7 @@ const middlewares = jsonServer.defaults();
 
 server.use(cors('*'));
 
-server.use('/productos', (req, res, next) => {
+server.get('/productos', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
 });
