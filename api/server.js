@@ -7,6 +7,7 @@ const middlewares = jsonServer.defaults();
 
 //CORS
 server.use(cors({
+    allowedHeaders,
     origin: '*'
 }));
 
