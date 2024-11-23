@@ -5,12 +5,7 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
-server.use(cors({
-    origin: 'https://fernandolhoyosh.github.io/AluraGeek/', // Permitir solo desde este origen
-    methods: ['PUT', 'GET', 'HEAD', 'POST', 'PATCH', 'DELETE', 'CONNECT', 'OPTIONS'],
-    allowedHeaders: ['Content-Type, X-Auth-Token, Origin, Authorization'],
-    credentials: true
-}));
+server.use(cors('*'));
 
 server.use(middlewares)
 // Add this before server.use(router)
